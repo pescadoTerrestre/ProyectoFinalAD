@@ -9,39 +9,44 @@ CREATE TABLE marcas (
     pais_origen VARCHAR(255)
 );
 
+-- Crear tabla familias
+CREATE TABLE familias (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL UNIQUE,
+    descripcion VARCHAR(255)
+);
+
 -- Crear tabla instrumentos
 CREATE TABLE instrumentos (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     descripcion VARCHAR(255),
-    categoria VARCHAR(255) NOT NULL,
+    cantidad INT DEFAULT 0 NOT NULL,
     marca_id BIGINT,
-    familia ENUM('Viento', 'Percusión', 'Cuerda'),
-    FOREIGN KEY (marca_id) REFERENCES marcas(id)
+    familia_id BIGINT,
+    FOREIGN KEY (marca_id) REFERENCES marcas(id),
+    FOREIGN KEY (familia_id) REFERENCES familias(id)
 );
 
 -- Crear tabla usuarios
 CREATE TABLE usuarios (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
-    dni VARCHAR(255)
-);
-
--- Crear tabla inventario
-CREATE TABLE inventario (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    instrumento_id BIGINT,
-    cantidad INT NOT NULL,
-    FOREIGN KEY (instrumento_id) REFERENCES instrumentos(id)
+    dni VARCHAR(255),
+    email VARCHAR(255),
+    telefono VARCHAR(255),
+    direccion VARCHAR(255),
+    fecha_registro DATE DEFAULT (CURDATE())
 );
 
 -- Crear tabla prestamos
 CREATE TABLE prestamos (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    instrumento_id BIGINT,
-    usuario_id BIGINT,
+    instrumento_id BIGINT NOT NULL,
+    usuario_id BIGINT NOT NULL,
     fecha_prestamo DATE NOT NULL,
     fecha_devolucion DATE,
+    estado ENUM('Pendiente', 'Devuelto') DEFAULT 'Pendiente' NOT NULL,
     FOREIGN KEY (instrumento_id) REFERENCES instrumentos(id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
