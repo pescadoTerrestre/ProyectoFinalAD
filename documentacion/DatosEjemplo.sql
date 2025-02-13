@@ -26,5 +26,5 @@ INSERT INTO usuarios (nombre, dni, email, telefono, direccion) VALUES
 
 -- Insertar datos de ejemplo en prestamos
 INSERT INTO prestamos (instrumento_id, usuario_id, fecha_prestamo, fecha_devolucion, estado) VALUES
-(1, 1, CURDATE(), NULL, 'Pendiente'),
-(2, 2, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 7 DAY), 'Devuelto');
+(2, 2, date(curdate()), NULL, 'Pendiente'),
+(1, 1, date(CURDATE()), NULL, 'Devuelto');

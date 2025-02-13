@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01bd5218-4a70-460c-bc8d-e7d29ae512f9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/ApIntrumentosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/controllers/FamiliaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/controllers/InstrumentoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/controllers/MarcaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/controllers/PrestamoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/controllers/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/models/Familia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/models/Instrumento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/models/Marca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/models/Prestamo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/models/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/repositories/FamilaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/repositories/InstrumentoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/repositories/MarcaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/repositories/PrestamoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/repositories/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/services/FamiliaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/services/InstrumentoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/services/MarcaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/services/PrestamoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/java/ad/APIntrumentos/services/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APIntrumentos/src/test/java/ad/APIntrumentos/ApIntrumentosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documentacion/ScriptSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentacion/ScriptSQL.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2stI6FZsaDQiUuvcw6ufke69hGA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DemoApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/Mi unidad/ACCESOADATOS/Final/codigo/API_instrumentos"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Brais\Downloads\demo\demo\src\main\java\com\example\demo\repositories" />
+      <recent name="C:\Users\Brais\Downloads\demo\demo\src\main\java\com\example\demo\models" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.demo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.controllers" />
+      <recent name="com.example.demo.services" />
+      <recent name="com.example.demo.repositories" />
+      <recent name="com.example.demo.models" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="demo1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="demo1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01bd5218-4a70-460c-bc8d-e7d29ae512f9" name="Changes" comment="" />
+      <created>1739268266214</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739268266214</updated>
+    </task>
+    <servers />
+  </component>
+</project>

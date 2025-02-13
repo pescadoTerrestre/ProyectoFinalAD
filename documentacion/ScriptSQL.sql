@@ -46,7 +46,7 @@ CREATE TABLE prestamos (
     usuario_id BIGINT NOT NULL,
     fecha_prestamo DATE NOT NULL,
     fecha_devolucion DATE,
-    estado ENUM('Pendiente', 'Devuelto') DEFAULT 'Pendiente' NOT NULL,
+    estado varchar(255) DEFAULT 'Pendiente' NOT NULL,
     FOREIGN KEY (instrumento_id) REFERENCES instrumentos(id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
