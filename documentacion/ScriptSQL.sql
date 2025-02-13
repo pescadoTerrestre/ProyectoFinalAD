@@ -44,9 +44,58 @@ CREATE TABLE prestamos (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     instrumento_id BIGINT NOT NULL,
     usuario_id BIGINT NOT NULL,
-    fecha_prestamo DATE NOT NULL,
+    fecha_prestamo DATE DEFAULT (current_date) NOT NULL,
     fecha_devolucion DATE,
     estado varchar(255) DEFAULT 'Pendiente' NOT NULL,
     FOREIGN KEY (instrumento_id) REFERENCES instrumentos(id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
+
+delimiter //
+create trigger PrestamosAU
+after update on prestamos
+for each row
+begin
+	update instrumentos 
+    set cantidad = 
+		case
+			when old.estado != new.estado and new.estado = 'Devuelto' then cantidad + 1
+			when old.estado != new.estado and new.estado = 'Pendiente' then cantidad - 1
+			else cantidad
+		end
+    where id = new.instrumento_id;
+end;
+//
+delimiter ;
+
+delimiter //
+create trigger PrestamosAI
+after insert on prestamos
+for each row
+begin
+	update instrumentos 
+    set cantidad = 
+		case
+			when new.estado = 'Pendiente' then cantidad - 1
+            else cantidad
+		end
+    where id = new.instrumento_id;
+end;
+//
+delimiter ;
+
+delimiter //
+create trigger PrestamosBD
+before delete on prestamos
+for each row
+begin
+	update instrumentos 
+    set cantidad = 
+		case
+			when old.estado = 'Pendiente' then cantidad + 1
+            else cantidad
+		end
+    where id = old.instrumento_id;
+end;
+//
+delimiter ;
