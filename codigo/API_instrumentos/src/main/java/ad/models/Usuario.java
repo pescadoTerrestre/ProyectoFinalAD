@@ -2,6 +2,7 @@ package ad.models;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity(name = "usuarios")
@@ -26,7 +27,7 @@ public class Usuario {
     private String direccion;
 
     @Column
-    private Date fecha_registro;
+    private LocalDate fecha_registro;
 
     public Usuario() {
     }
@@ -79,7 +80,11 @@ public class Usuario {
         this.direccion = direccion;
     }
 
-    public Date getFecha_registro() {
+    public LocalDate getFecha_registro() {
         return fecha_registro;
+    }
+
+    public void setFecha_registro(LocalDate fecha_registro) {
+        this.fecha_registro = fecha_registro;
     }
 }

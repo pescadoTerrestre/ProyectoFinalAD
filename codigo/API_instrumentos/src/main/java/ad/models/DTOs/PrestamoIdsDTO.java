@@ -1,33 +1,20 @@
-package ad.models;
+package ad.models.DTOs;
 
-import jakarta.persistence.*;
+import ad.models.Prestamo;
 
 import java.time.LocalDate;
 
-@Entity(name = "prestamos")
-public class Prestamo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PrestamoIdsDTO {
     private int id;
-
-    @ManyToOne
-    @JoinColumn(name = "instrumento_id")
-    private Instrumento instrumento;
-
-    @ManyToOne
-    @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
-
-    @Column
+    private int instrumento_id;
+    private int usuario_id;
     private LocalDate fecha_prestamo;
-
-    @Column
-    private LocalDate fecha_devolucion;
-
-    @Column
+    private LocalDate fecha_devolucion ;
     private String estado;
 
-    public Prestamo() {
+    public PrestamoIdsDTO() {
+        this.fecha_devolucion = null;
+        this.estado = "Pendiente";
     }
 
     public int getId() {
@@ -38,20 +25,20 @@ public class Prestamo {
         this.id = id;
     }
 
-    public Instrumento getInstrumento() {
-        return instrumento;
+    public int getInstrumento_id() {
+        return instrumento_id;
     }
 
-    public void setInstrumento(Instrumento instrumento) {
-        this.instrumento = instrumento;
+    public void setInstrumento_id(int instrumento_id) {
+        this.instrumento_id = instrumento_id;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public int getUsuario_id() {
+        return usuario_id;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setUsuario_id(int usuario_id) {
+        this.usuario_id = usuario_id;
     }
 
     public LocalDate getFecha_prestamo() {

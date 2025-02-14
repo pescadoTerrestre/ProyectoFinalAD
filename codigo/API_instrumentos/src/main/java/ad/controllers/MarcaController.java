@@ -28,6 +28,12 @@ public class MarcaController {
         return marcaRepository.save(marca);
     }
 
+    @PutMapping("/{id}")
+    public Marca actualizar(@PathVariable int id, @RequestBody Marca marca){
+        marca.setId(id);
+        return marcaRepository.save(marca);
+    }
+
     @DeleteMapping("/{id}")
     public void borrar(@PathVariable int id){
         marcaRepository.deleteById(id);
