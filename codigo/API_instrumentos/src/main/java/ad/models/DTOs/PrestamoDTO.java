@@ -1,10 +1,11 @@
 package ad.models.DTOs;
 
-import ad.models.Prestamo;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.time.LocalDate;
 
-public class PrestamoIdsDTO {
+@Schema(description = "Entidad que simplifica al cliente enviar un prestamo")
+public class PrestamoDTO {
     private int id;
     private int instrumento_id;
     private int usuario_id;
@@ -12,8 +13,7 @@ public class PrestamoIdsDTO {
     private LocalDate fecha_devolucion ;
     private String estado;
 
-    public PrestamoIdsDTO() {
-        this.fecha_devolucion = null;
+    public PrestamoDTO() {
         this.estado = "Pendiente";
     }
 

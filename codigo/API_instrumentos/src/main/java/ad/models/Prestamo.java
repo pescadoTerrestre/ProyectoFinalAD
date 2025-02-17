@@ -1,29 +1,42 @@
 package ad.models;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDate;
 
+@Schema(description = "Entidad que representa un Prestamo")
 @Entity(name = "prestamos")
 public class Prestamo {
+    @Schema(description = "Identificador unico", example = "3")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Schema(description = "Identificador del instrumento prestado", example = "2")
+    @NotBlank(message = "El identificador del instrumento no puede estar en blanco")
     @ManyToOne
     @JoinColumn(name = "instrumento_id")
     private Instrumento instrumento;
 
+    @Schema(description = "Identificador del usuario que hace el prestamo", example = "1")
+    @NotBlank(message = "El identificador del usuario nu puede estar en blanco")
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    @Schema(description = "fecha en la que se hace el prestamo", example = "2025-02-17")
+    @NotBlank(message = "La fecha de prestamo no puede estar en blanco")
     @Column
     private LocalDate fecha_prestamo;
 
+    @Schema(description = "fecha en la que se devolvio el prestamo", example = "2025-02-21")
     @Column
     private LocalDate fecha_devolucion;
 
+    @Schema(description = "estado actual del prestamo", example = "Devuelto")
+    @NotBlank(message = "El estado no puede estar en blanco")
     @Column
     private String estado;
 

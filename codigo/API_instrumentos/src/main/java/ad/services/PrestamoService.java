@@ -1,6 +1,6 @@
 package ad.services;
 
-import ad.models.DTOs.PrestamoIdsDTO;
+import ad.models.DTOs.PrestamoDTO;
 import ad.models.Instrumento;
 import ad.models.Usuario;
 import ad.repositories.InstrumentoRepository;
@@ -55,7 +55,7 @@ public class PrestamoService {
         return prestamoRepository.findById(id).orElseGet(null);
     }
 
-    public Prestamo guardar(PrestamoIdsDTO prestamoDTO) throws Exception {
+    public Prestamo guardar(PrestamoDTO prestamoDTO) throws Exception {
         Prestamo prestamo = new Prestamo();
         Instrumento instrumento = instrumetoRepository.findById(prestamoDTO.getInstrumento_id()).orElse(null);
         Usuario usuario = usuarioRepository.findById(prestamoDTO.getInstrumento_id()).orElse(null);
@@ -64,10 +64,10 @@ public class PrestamoService {
         prestamo.setInstrumento(instrumento);
         prestamo.setUsuario(usuario);
         prestamo.setFecha_prestamo(prestamoDTO.getFecha_prestamo());
-        prestamo.setFecha_devolucion(prestamoDTO.getFecha_devolucion());
+        prestamo.setFecha_devolucion((prestamoDTO.getEstado().equals("Pendiente"))? null: prestamoDTO.getFecha_devolucion());
         prestamo.setEstado(prestamoDTO.getEstado());
 
-        if (instrumento.getCantidad() - 1 < 1){
+        if (instrumento.getCantidad() < 1 && prestamo.getEstado().equals("Pendiente")){
             throw new Exception("No quedan unidades disponible");
         }else {
             return prestamoRepository.save(prestamo);

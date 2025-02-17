@@ -1,6 +1,9 @@
 package ad.models.DTOs;
 
-public class InstrumentoIdsDTO {
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "Entidad que simplifica al cliente enviar un instrumento")
+public class InstrumentoDTO {
     private int id;
 
     private String nombre;
@@ -13,7 +16,7 @@ public class InstrumentoIdsDTO {
 
     private int familia_id;
 
-    public InstrumentoIdsDTO() {
+    public InstrumentoDTO() {
     }
 
     public int getId() {

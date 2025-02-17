@@ -1,6 +1,6 @@
 package ad.services;
 
-import ad.models.DTOs.InstrumentoIdsDTO;
+import ad.models.DTOs.InstrumentoDTO;
 import ad.models.Instrumento;
 import ad.repositories.FamiliaRepository;
 import ad.repositories.InstrumentoRepository;
@@ -29,7 +29,7 @@ public class InstrumentoService {
         return instrumentoReposotory.findById(id).orElseGet(null);
     }
 
-    public Instrumento guardar(InstrumentoIdsDTO instrumentoDTO){
+    public Instrumento guardar(InstrumentoDTO instrumentoDTO){
         Instrumento instrumento = new Instrumento();
 
         instrumento.setId(instrumentoDTO.getId());
