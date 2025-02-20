@@ -30,25 +30,11 @@ public class PrestamoService {
     }
 
     public List<Prestamo> obtenerPendientes(){
-        List<Prestamo> listaPendientes = new ArrayList<>();
-
-        prestamoRepository.findAll().forEach(prestamo -> {
-            if (prestamo.getEstado().equals("Pendiente")){
-                listaPendientes.add(prestamo);
-            }
-        });
-        return listaPendientes;
+        return prestamoRepository.findPendientes();
     }
 
     public List<Prestamo> obtenerDevueltos(){
-        List<Prestamo> listaDeueltos = new ArrayList<>();
-
-        prestamoRepository.findAll().forEach(prestamo -> {
-            if (prestamo.getEstado().equals("Devuelto")){
-                listaDeueltos.add(prestamo);
-            }
-        });
-        return listaDeueltos;
+        return prestamoRepository.findDevueltos();
     }
 
     public Prestamo obtenerPorId(int id){
