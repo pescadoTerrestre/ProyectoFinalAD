@@ -14,13 +14,13 @@ public class Prestamo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Schema(description = "Identificador del instrumento prestado", example = "2")
+    @Schema(description = "Identificador del instrumento prestado")
     @NotBlank(message = "El identificador del instrumento no puede estar en blanco")
     @ManyToOne
     @JoinColumn(name = "instrumento_id")
     private Instrumento instrumento;
 
-    @Schema(description = "Identificador del usuario que hace el prestamo", example = "1")
+    @Schema(description = "Identificador del usuario que hace el prestamo")
     @NotBlank(message = "El identificador del usuario nu puede estar en blanco")
     @ManyToOne
     @JoinColumn(name = "usuario_id")

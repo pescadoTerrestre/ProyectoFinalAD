@@ -28,12 +28,12 @@ public class Instrumento {
     @Column
     private int cantidad;
 
-    @Schema(description = "Identificados de la Marca del instrumento", example = "2")
+    @Schema(description = "Identificados de la Marca del instrumento")
     @ManyToOne
     @JoinColumn(name="marca_id")
     private Marca marca;
 
-    @Schema(description = "Identificador de la Familia a la que pertenece el instrumento", example = "1")
+    @Schema(description = "Identificador de la Familia a la que pertenece el instrumento")
     @ManyToOne
     @JoinColumn(name="familia_id")
     private Familia familia;
